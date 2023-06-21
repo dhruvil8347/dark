@@ -61,7 +61,7 @@ class Setting extends StatelessWidget {
             child: Obx(() {
               return TextField(
                 controller: c.name,
-                onChanged: (value) => c.Username,
+                //onChanged: (value) => c.Username,
                 decoration: InputDecoration(
                   hintText: c.Username.value,
                   border: InputBorder.none,
@@ -75,7 +75,7 @@ class Setting extends StatelessWidget {
 
           ElevatedButton(
               onPressed: () {
-                c.Username.value=c.name.text.toString();
+                c.Username.value = c.name.text.toString();
               },
               child: Text("print")),
           SizedBox(
@@ -88,7 +88,7 @@ class Setting extends StatelessWidget {
               style: TextStyle(color: Colors.black),
             );
           }),
-        /*  SizedBox(
+          /*  SizedBox(
             height: 20,
           ),
 
@@ -105,14 +105,14 @@ class Setting extends StatelessWidget {
             height: 50,
             width: 200,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                blurRadius: 1.0,
-                color: Colors.grey,
-                offset: Offset(0.0, 0.0))
-              ]
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 1.0,
+                      color: Colors.grey,
+                      offset: Offset(0.0, 0.0))
+                ]
             ),
             child: TextField(
               controller: c.num1,
@@ -145,16 +145,18 @@ class Setting extends StatelessWidget {
               ),
             ),
           ),
-           SizedBox(
-             height: 20,
-           ),
-          ElevatedButton(onPressed: (){
-            c.num1; c.num2;
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(onPressed: () {
+            c.no1.value + c.no2.value ;
           }, child: Text("calculate")),
           SizedBox(
             height: 20,
           ),
-          Text("result"),
+          Obx(() {
+            return Text("");
+          }),
 
         ],
       ),
