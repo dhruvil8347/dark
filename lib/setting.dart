@@ -105,7 +105,7 @@ class Setting extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 1.0,
                       color: Colors.grey,
@@ -113,13 +113,13 @@ class Setting extends StatelessWidget {
                 ]),
             child: TextField(
               controller: c.num1,
-              decoration: InputDecoration(
-                hintText: "number1",
+              decoration: const InputDecoration(
+                hintText: "enter your number",
                 border: InputBorder.none,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -128,7 +128,7 @@ class Setting extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       blurRadius: 1.0,
                       color: Colors.grey,
@@ -137,12 +137,12 @@ class Setting extends StatelessWidget {
             child: TextField(
               controller: c.num2,
               decoration: InputDecoration(
-                hintText: "number2",
+                hintText: "enter your number",
                 border: InputBorder.none,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 
@@ -154,39 +154,39 @@ class Setting extends StatelessWidget {
                   onPressed: () {
                     c.addtion();
                   },
-                  child: Text("Addtion")),
-              SizedBox(
+                  child: const Text("Addtion")),
+              const SizedBox(
                 width: 15,
               ),
               ElevatedButton(
                   onPressed: () {
                     c.sub();
                   },
-                  child: Text("Subtrtion")),
-              SizedBox(
+                  child: const Text("Subtrtion")),
+              const SizedBox(
                 width: 15,
               ),
               ElevatedButton(
                   onPressed: () {
                     c.multi();
                   },
-                  child: Text("Mutiplie")),
+                  child: const Text("Mutiplie")),
 
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               ElevatedButton(
                   onPressed: () {
                     c.devide();
                   },
-                  child: Text("devide")),
+                  child: const Text("devide")),
 
 
             ],
           ),
 
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Obx(() {

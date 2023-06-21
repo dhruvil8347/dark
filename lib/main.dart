@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:dark/service.dart';
 import 'package:dark/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -203,9 +206,19 @@ class _MyHomepageState extends State<MyHomepage> {
             SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: () {
-              Get.to(Setting());
-             }, child: Text("Screen"))
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(Setting());
+                },
+                child: Text("Screen")),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                 Get.to(Ss());
+                },
+                child: Text("Screen2"))
           ],
         ),
       ),
