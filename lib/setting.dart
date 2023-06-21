@@ -145,16 +145,52 @@ class Setting extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(
-              onPressed: () {
-                c.addtion();
-              },
-              child: Text("calculate")),
+
+          Row(
+            crossAxisAlignment:CrossAxisAlignment.center ,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    c.addtion();
+                  },
+                  child: Text("Addtion")),
+              SizedBox(
+                width: 15,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    c.sub();
+                  },
+                  child: Text("Subtrtion")),
+              SizedBox(
+                width: 15,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    c.multi();
+                  },
+                  child: Text("Mutiplie")),
+
+              SizedBox(
+                width: 15,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    c.devide();
+                  },
+                  child: Text("devide")),
+
+
+            ],
+          ),
+
+
           SizedBox(
             height: 20,
           ),
           Obx(() {
-            return Text(c.sum.value.toString());
+            return Text(c.sum.toString());
           }),
         ],
       ),
