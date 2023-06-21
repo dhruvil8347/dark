@@ -12,6 +12,7 @@ class CounterController extends GetxController {
   //calculator
   final TextEditingController num1 = TextEditingController();
   final TextEditingController num2 = TextEditingController();
+  RxString sum = "".obs;
 
 
 
@@ -21,8 +22,6 @@ class CounterController extends GetxController {
     counter.value = 0;
     Username.value = "";
 
-    no1.value = 0;
-    no2.value = 0;
 
   }
 
@@ -36,6 +35,11 @@ class CounterController extends GetxController {
 
   void minusCount() {
     counter.value--;
+  }
+
+  void addtion(){
+    //num1.text + num2.text;
+    sum.value  = num1.text + num2.text;
   }
 
 }

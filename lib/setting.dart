@@ -72,7 +72,6 @@ class Setting extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-
           ElevatedButton(
               onPressed: () {
                 c.Username.value = c.name.text.toString();
@@ -81,7 +80,6 @@ class Setting extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-
           Obx(() {
             return Text(
               c.Username.value.toString(),
@@ -112,18 +110,18 @@ class Setting extends StatelessWidget {
                       blurRadius: 1.0,
                       color: Colors.grey,
                       offset: Offset(0.0, 0.0))
-                ]
-            ),
+                ]),
             child: TextField(
               controller: c.num1,
               decoration: InputDecoration(
                 hintText: "number1",
                 border: InputBorder.none,
-
               ),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             height: 50,
             width: 200,
@@ -135,8 +133,7 @@ class Setting extends StatelessWidget {
                       blurRadius: 1.0,
                       color: Colors.grey,
                       offset: Offset(0.0, 0.0))
-                ]
-            ),
+                ]),
             child: TextField(
               controller: c.num2,
               decoration: InputDecoration(
@@ -148,16 +145,17 @@ class Setting extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(onPressed: () {
-            c.no1.value + c.no2.value ;
-          }, child: Text("calculate")),
+          ElevatedButton(
+              onPressed: () {
+                c.addtion();
+              },
+              child: Text("calculate")),
           SizedBox(
             height: 20,
           ),
           Obx(() {
-            return Text("");
+            return Text(c.sum.value.toString());
           }),
-
         ],
       ),
     );
