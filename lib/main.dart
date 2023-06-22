@@ -1,7 +1,9 @@
 import 'dart:developer';
 
+import 'package:dark/getx_shared_pref.dart';
 import 'package:dark/service.dart';
 import 'package:dark/setting.dart';
+import 'package:dark/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -218,7 +220,24 @@ class _MyHomepageState extends State<MyHomepage> {
                 onPressed: () {
                  Get.to(Ss());
                 },
-                child: Text("Screen2"))
+                child: Text("Screen2")),
+            SizedBox(
+              height: 10,
+            ),
+
+            ElevatedButton(onPressed: (){
+              Get.to(Shared_preferences());
+            }, child: Text("shared preferences")),
+
+            SizedBox(
+              height: 10,
+            ),
+
+            ElevatedButton(onPressed: (){
+              Get.to(SharedGetx());
+            }, child: Text("shared preferences")),
+
+
           ],
         ),
       ),
